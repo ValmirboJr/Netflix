@@ -1,0 +1,163 @@
+:root {
+    --color-background: #141414;
+    --color-text-primary: #FFFFFF;
+    --color-text-title: #E50914;
+    --color-text-main: #AAA;
+    --color-background-button: #FFFFFF;
+    --color-text-button: #141414;
+}
+
+body {
+    background: var(--color-background);
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text-primary);
+}
+
+header .container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between;   
+}
+
+.logo {
+    max-width: 100px;
+}
+
+header nav a {
+    text-decoration: none; 
+    margin-right: 15px; 
+    color: var(--color-text-main);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: var(--color-text-primary);
+}
+
+.main-movie {
+    background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)100%), url('/imagens/Principal.jpeg');
+    background-size: cover;
+    background-position: cover;
+    height:550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.main-movie .description {
+    margin-top: 10px;
+    font-size: 16px;
+    max-width: 600px;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+}
+
+.main-movie .title-movie {
+    font-size: 40px;
+    color: var(--color-text-title);
+    margin-top: 10px;
+}
+
+.main-movie .container {
+    width: 70%;
+}
+
+.button {
+    background-color: var(--color-background-button);
+    border: none;
+    color: var(--color-text-button);
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--color-text-button);
+    color: var(--color-background-button);
+}
+
+.button i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.box-movie {
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border-radius: 8px;
+}
+
+.box-movie img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.box-movie:hover {
+    transform: scale(1.1);
+}
+
+.box-movie::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.box-movie:hover::before {
+    opacity: 1;
+}
+
+.box-movie:hover img {
+    transform: scale(1.1);
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 230  px; 
+}
+
+.baseboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;    
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.baseboard a {
+    color: var(--color-text-primary);
+}
